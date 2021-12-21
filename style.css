@@ -1,1 +1,7 @@
-font-family: system-ui;
+@font-face {
+    font-family: 'Igra Sans';
+    src: local('Igra Sans'), local('IgraSans'), url('Igrasans.woff2') format('woff2'), url('Igrasans.woff') format('woff'), url('Igrasans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
