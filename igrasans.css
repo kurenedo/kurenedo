@@ -1,6 +1,6 @@
 @font-face {
-    font-family: igrasans;
+    font-family: IgraSans;
     src: url(https://kurenedo1105.github.io/igrasans.woff); format("woff")
     src: url(https://kurenedo1105.github.io/igrasans.woff2); format("woff2")
-    src: url(https://kurenedo1105.github.io/igrasans.ttf); format(:ttf)
+    src: url(https://kurenedo1105.github.io/igrasans.ttf); format("ttf")
 }
