@@ -1,1 +1,1 @@
-# kurenedo1105.github.io
+# https://kurenedo.ru
