@@ -10,12 +10,10 @@ ol.center li
 }
 @font-family: 'Rubik', sans-serif;
 
-.a {
+a:link {
     color: plum;
 }
-<style>
-        ol.m {list-style-type: lower-latin;}
-            ol.g {list-style-type: hiragana;}
-            ol.l {list-style-type: lower-greek;}
-            ol.s {list-style-type: inherit;}
-        </style>
+a:visited {
+    color: green;
+}
+
