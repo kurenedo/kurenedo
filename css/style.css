@@ -2,6 +2,10 @@
 {
  text-align: center;
  list-style-position: inside;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%
 }
 @font-family: 'Rubik', sans-serif;
 a:link {
