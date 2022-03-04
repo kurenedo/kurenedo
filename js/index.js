@@ -30,3 +30,8 @@ function currentTime() {
   }
   
   currentTime(); /* calling currentTime() function to initiate the process */
+  function currentTime() {
+    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+  }
+  
+  currentTime(); /* calling currentTime() function to initiate the process */
