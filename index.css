@@ -1,3 +1,6 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+</style>
 .clock {
     width: 100%;
     height: 400px;
@@ -5,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family: 'Shippori Antique B1', sans-serif;
     background-color: #424558;
   }
   
