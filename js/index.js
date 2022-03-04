@@ -1,24 +1,22 @@
-function currentTime() {
-  var date = new Date(); /* creating object of Date class */
-  var hour = date.getHours();
-  var min = date.getMinutes();
-  var sec = date.getSeconds();
-  hour = updateTime(hour);
-  min = updateTime(min);
-  sec = updateTime(sec);
-  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
-    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
-}
-
-function updateTime(k) {
-  if (k < 10) {
-    return "0" + k;
+function clock() {// We create a new Date object and assign it to a variable called "time".
+  var time = new Date(),
+      
+      // Access the "getHours" method on the Date object with the dot accessor.
+      hours = time.getHours(),
+      
+      // Access the "getMinutes" method with the dot accessor.
+      minutes = time.getMinutes(),
+      
+      
+      seconds = time.getSeconds();
+  
+  document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
+    
+    function harold(standIn) {
+      if (standIn < 10) {
+        standIn = '0' + standIn
+      }
+      return standIn;
+    }
   }
-  else {
-    return k;
-  }
-}
-
-currentTime(); /* calling currentTime() function to initiate the process */
-
-
+  setInterval(clock, 1000);
