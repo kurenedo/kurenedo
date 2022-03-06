@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+:root {
+  --variable-name: value;
+}
+selector {
+  property: var(--variable-name);
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
 :root {
   --font-family: "Shippori Antique B1", sans-serf;
   --normal-font: 400;
@@ -43,7 +51,6 @@ a:hover {
 body {
   font-family: var(--font-family);
 }
-
 nav {
   position: sticky;
   top: 0;
@@ -56,7 +63,6 @@ nav {
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
-
 nav h1 {
   color: var(--primary-color);
 }
@@ -78,7 +84,6 @@ nav ul {
 nav ul li {
   font-weight: var(--bold-font);
 }
-
 .burger-menu {
   color: var(--primary-color);
   font-size: 2rem;
@@ -87,7 +92,6 @@ nav ul li {
   cursor: pointer;
   display: none;
 }
-
 .hero {
   display: flex;
   align-items: center;
@@ -96,7 +100,26 @@ nav ul li {
   max-width: 68.75rem;
   margin: auto;
 }
+.hero img {
+  height: 37.5rem;
+  width: 37.5rem;
+}
 
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
 .more-about {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
@@ -111,4 +134,3 @@ nav ul li {
   line-height: var(--line-height);
   padding: 0.4rem;
 }
-/* end */
