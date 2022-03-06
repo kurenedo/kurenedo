@@ -32,73 +32,117 @@
 * {
   box-sizing: border-box;
 }
+/* Variables */
+:root {
+  --font-family: "Shippori Antique B1", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
 body {
-  color: #222222;
-  font-size: 1em;
-  font-family: 'Shippori Antique B1', sans-serif;
+  font-family: var(--font-family);
 }
 
-.content-footer,
-.masthead-heading,
-.masthead-intro {
-text-align: center;
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.masthead {
-padding: 6em 0;
-background-image: url('https://kurenedo.ru/rosie.jpg');
-background-size: cover;
-background-repeat: no-repeat;
+nav h1 {
+  color: var(--primary-color);
 }
 
-.masthead-intro {
-  margin-bottom: 0.1em;
-  font-size: 2em;
-  color: #ffffff;
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
-.masthead-heading {
-  margin-top: -0.2em;
-  font-weight: bold;
-  font-size: 6em;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: #ffffff;
+nav ul {
+  display: flex;
+  gap: 1.9rem;
 }
 
-.details {
-  max-width: 38em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
+nav ul li {
+  font-weight: var(--bold-font);
 }
 
-.details > p {
-  font-weight: 300;
-  letter-spacing: 0.05em;
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
 }
 
-.details > h2 {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 2em 0 1em 0;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
 }
 
-section > h1 {
-  margin-top: 2em;
+.more-about {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
 }
 
-#footer {
-padding: 20px 0;
-text-align: center;
-background-color: #111111;
-text-decoration: none;
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
 }
 
-#footer a {
-color: #ffffff;
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
 }
-.social > li {
-display: inline-block;
-margin: 0 5px;
-}
+/* end */
