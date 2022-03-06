@@ -28,15 +28,3 @@ date = date < 10 ? '0' + date : date;
 var period = hours < 12 ? 'AM' : 'PM';
 time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
 dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
-
-const navId = document.getElementById("nav_menu"),
- ToggleBtnId = document.getElementById("toggle_btn"),
- CloseBtnId = document.getElementById("close_btn");
-// ==== SHOW MENU ==== //
-ToggleBtnId.addEventListener("click", () => {
- navId.classList.add("show");
-});
-// ==== HIDE MENU ==== //
-CloseBtnId.addEventListener("click", () => {
- navId.classList.remove("show");
-});
