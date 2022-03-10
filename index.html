@@ -54,33 +54,57 @@
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 {
-    background-color: #1abc9c; /* Green */
+    background-color: #305e54; 
     color: #ffffff;
   }
   .bg-2 {
-    background-color: #474e5d; /* Dark Blue */
+    background-color: #6b7385; 
     color: #ffffff;
   }
   .bg-3 {
-    background-color: #ffffff; /* White */
-    color: #555555;
+    background-color: #9488b4; 
+    color: #ffffff;
   }
   .bg-4 {
-    background-color: #2f2f2f; /* Black Gray */
+    background-color: #2f2f2f; 
     color: #fff;
+  }
+  .bg-5 {
+    background-color: #5d78b8; 
+    color: #ffffff;
+  }
+  .bg-6 {
+    background-color: #969449; 
+    color: #ffffff;
+  }
+  .bg-7 {
+    background-color: #6553a8; 
+    color: #ffffff;
+  }
+  .bg-8 {
+    background-color: #53a89d; 
+    color: #ffffff;
+  }
+  .bg-9 {
+    background-color: #a85393; 
+    color: #ffffff;
+  }
+  .bg-10 {
+    background-color: #a86b53; 
+    color: #ffffff;
   }
   .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
   }
   .navbar {
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 15px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
   }
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
@@ -99,7 +123,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Kurenedo</a>
+      <a class="navbar-brand" >Kurenedo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -133,17 +157,17 @@
       var year = now.getFullYear();
 
       // store day and month name in an array
-      var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      var dayNames = ['Sunday', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+      var monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
       // format date and time
-      hours = hours % 12 || 12;
+      hours = hours % 24 || 24;
       minutes = minutes < 10 ? '0' + minutes : minutes;
       seconds = seconds < 10 ? '0' + seconds : seconds;
       date = date < 10 ? '0' + date : date;
 
       // display date and time
-      var period = hours < 12 ? 'AM' : 'PM';
+      var period = hours < 24 ? 'Time' : 'Time';
       time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
       dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
     }
@@ -152,21 +176,114 @@
     setInterval(updateClock, 1000);
   </script>
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Пока нечего писать :(</h3>
-  <h3>Лучше посмотрите на часы.</h3>
+<div class="container-fluid bg-1">
+  <h3 class="margin">DNS (обязательный блок)</h3>
+  <ol>
+    <li>Что такое доменное имя и для чего оно необходимо? </li>
+    <li> Как связать домен с хостингом?</li>
+    <li>Какие ресурсные записи DNS Вы знаете? Для чего они
+      используются?</li>
+<ul>
+  <li>Может ли одному доменному имени соответствовать
+    несколько IP адресов?</li>
+  <li>Может ли одному IP соответствовать несколько доменных
+    имен?</li>
+</ul>
+<li> Как проходит DNS запрос?</li>
+<li>Что такое уровни домена. Как получить поддомен?</li>
+</ol>
 </div>
-
 <!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin"></h3>
-  <p>Часики то тикают!</p>
+<div class="container-fluid bg-2">
+  <h3 class="margin">DNS (обязательный блок)</h3>
+  <ol>
+  <li><p>Доменное имя – адрес, который указывают пользователи, чтобы зайти на ваш сайт.<p></li>
+  <li><p>Добавить домен на сервер хостинга и Указать в домене IP адрес сервера хостинга</p> </li>
+  <li><p>Запись A – переадресация страницы на существующий адрес. TXT-запись в большинстве случаев используется для подтверждения домена</p></li>
+  <ul>
+    <li><p>Одно доменное имя может соответствовать: одному IP-адресу</p></li>
+    <li><p>Да (но не всегда, по моему опыту есть сервисы которые требуют переадресацию А-записи который использует всего лишь один айпи адрес)</p></li>
+  </ul>
+  <li><p>Корневой сервер направляет запрос серверу первого уровня, который в свою очередь передает его серверу второго уровня. Это движение продолжается до тех пор, пока не будет найдено совпадение имени и IP-адреса.</p></li>
+  <li><p>Уровень домена – расположение домена в иерархической структуре доменных имен в сети Интернет. Если говорить техническим языком, то нужно зайти в DNS сервер, задать А-запись с конкретным названием поддомена.</p></li>
+  </ol>
+  </div>
+  <!-- Third Container -->
+  <div class="container-fluid bg-5">
+  <h3 class="margin">Хостинг (обязательный блок)</h3>
+  <ol>
+  <li>Что такое хостинг сайтов?</li>
+  <li>Какие виды хостинга вы знаете? Чем отличаются (преимущества и
+    недостатки):</li>
+  </ol>
+  <ul>
+    <li>виртуальный хостинг (shared hosting)</li>
+    <li>VPS/VDS</li>
+    <li>Dedicated</li>
+    <li>Colocatiod</li>
+    <li>Облачный хостинг (cloud-hosting)?</li>
+  </ul>
+  </div>
+<!-- Four Container -->
+<div class="container-fluid bg-3">
+<h3 class="margin">Хостинг (обязательный блок)</h3>
+<ol>
+ <li><p>Хостинг для сайта — это пространство, на котором он <q>живет.</p></q></li>
+ <li><p>Говоря простым языком, VPS (virtual private server) или  VPS (Virtual Private Server)   — это виртуальная машина, которую компания-провайдер предоставляет в аренду своим клиентам. Плюсы – Вы полностью сможете контролировать все процессы, происходящие на сервере. Минусы –  Неправильные настройки сервера могут вызвать уязвимости в безопасности.</p></li>
+ <p>Облачный хостинг – это виртуальные машины (ВМ) в облаке или IaaS (инфраструктура как сервис). При таком хостинге физические серверы объединяются в кластер, а системы хранения – в сеть хранения данных (SAN). Плюсы –  Более гибкий и масштабируемый, чем VPS. Минусы – Не предлагает такой степени контроля, как при VPS.</p>
+ </ul>
+</ol>
 </div>
+<!-- Five Container -->
+<div class="container-fluid bg-6">
+<h3 class="margin">Утилиты* (обязательный блок)</h3>
+<p>Зачем нужны dig, host, nslookup, ping?</p>
+<p>NSLOOKUP — это утилита, которая позволяет через командную строку узнать содержимое DNS. Утилита поможет:</p>
+   <ul>
+   <li><p>узнать IP-адрес</p></li>
+   <li><p>узнать A, NS, SOA, MX-записи для домена.</p></li>
+   </ul>
+    <p>Утилита dig позволяет отправлять на DNS-сервер запросы с заданными параметрами, чтобы узнать информацию обо всех или только о некоторых DNS-записях. Аналог dig — утилита nslookup: с её помощью тоже можно проверить DNS-записи домена. </p>
+    <p>Команда ping позволяет проверять собственную связь и состояние удалённых хостов, находить и локализировать неполадки в программном и аппаратном обеспечении, тестировать качество сетей</p>
+    <p>host — утилита в UNIX-системах (DNS-клиент; аналог в Windows — nslookup), предназначенная для обращения и получения информации DNS-серверов. (тот же самый nslookup только для линукса)</p>
+</div>
+<div>
+  <!-- Six Container -->
+  <div class="container-fluid bg-7">
+    <h3 class="margin">Другое (обязательный блок)</h3>
+    <ol>
+      <li><p>Что вы можете сказать о dos/ddos атаке?</p></li>
+      <li><p>Что такое SSL-сертификат?</p></li>
+     </ol>
+     <p>DDOS атака — это Массированная атака большого количества айпи адресов на сервер сайта, соотвественно ложит сайт до какого-то периода времени. В большинстве случаев это делается по злому умыслу.</p>
+     <p>SSL-сертификаты — это файлы данных, которые электронным способом привязывают ключ шифрования к информации о компании. Если на веб-сервере установлен сертификат, в браузере активируется «замок» и осуществляется безопасное подключение к веб-серверу по протоколу HTTPS.</p>
+  </div>
+  <!-- Seven Container -->
+  <div class="container-fluid bg-8">
+  <h3 class="margin">Работа с сайтами</h3>
+  <ol>
+    <li><p>Из чего состоит сайт?</p></li>
+    <li><p>Что такое CMS, какие виды вы знаете?</p></li>
+    <li>Для чего нужна База Данных?<p></p></li>
+  </ol>
+  <p>Домен – хостинг – CMS – верстка – юзабили – дизайн(в моём случае случае только домен, гитхаб и кривые руки.</p>
+  <p>CMS (англ. Content Management System) — это система управления контентом сайта. На профессиональном жаргоне CMS ещё называют «движок сайта». Примеры CMS: WordPress, Joomla!, OpenCart.</p>
+  <p>База данных нужна для сайтов. Например магазины которые сохраняют ФИО, адрес куда доставить довар, пожелание покупателя для курьера. Куда сохраняются эти данные? Правильно в базу данных.</p>
+  </div>
+  <!-- Eight Container -->
+  <div class="container-fluid bg-9">
+    <h3 class="margin">Практический блок</h3>
+    <p>Определить IP-адрес сайта REG.RU (несколько способов)</p>
+    <p><a href="https://www.whois.com/whois/reg.ru">WHO IS</a> <q>ns1.reg.ru</q> <q>176.99.13.11</q> <q>2a00:f940:4::47</q>
+    <img src="https://kurenedo.ru/ip.jpg" alt="host" width="600" height="200">
+  </div>
+
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p><a href="https://github.com/kurenedo">Github</a></p>
   <p><a href="https://t.me/kurendo">Телега</a></p>
   <p><a href="mailto:dima@kurenedo.ru">Электропочта</a></p>
 </footer>
+</div>
 </body>
 </html>
