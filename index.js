@@ -27,4 +27,4 @@ date = date < 10 ? '0' + date : date;
 // display date and time
 var period = hours < 24 ? 'Time' : 'Time';
 time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + period;
-dateTime.innerHTML = dayNames[day] + ', ' + monthNames[month] + ' ' + date + ', ' + year;
+dateTime.innerHTML =  dayNames[day] + ', ' + date + ' ' + monthNames[month] + ', ' + year;
