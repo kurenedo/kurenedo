@@ -1,151 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kurenedo</title>
-  <style>
-    body {
-      font-family: 'Alegreya Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-    }
-
-    .clock {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: #000000;
-    }
-
-    .time {
-      font-size: 80px;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .date-time {
-      font-size: 20px;
-      color: #fff;
-    }
-
-    @media screen and (max-width: 768px) {
-      .time {
-        font-size: 50px;
-      }
-    }
-  </style>
-  <style>
-  body {
-    font-family: 50px "Alegreya Sans", sans-serif;
-    line-height: 1.8;
-    color: #f5f6f7;
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 {
-    background-color: #305e54; 
-    color: #ffffff;
-  }
-  .bg-2 {
-    background-color: #6b7385; 
-    color: #ffffff;
-  }
-  .bg-3 {
-    background-color: #9488b4; 
-    color: #ffffff;
-  }
-  .bg-4 {
-    background-color: #2f2f2f; 
-    color: #fff;
-  }
-  .bg-5 {
-    background-color: #5d78b8; 
-    color: #ffffff;
-  }
-  .bg-6 {
-    background-color: #969449; 
-    color: #ffffff;
-  }
-  .bg-7 {
-    background-color: #6553a8; 
-    color: #ffffff;
-  }
-  .bg-8 {
-    background-color: #53a89d; 
-    color: #ffffff;
-  }
-  .bg-9 {
-    background-color: #a85393; 
-    color: #ffffff;
-  }
-  .bg-10 {
-    background-color: #a86b53; 
-    color: #ffffff;
-  }
-  .container-fluid {
-    padding-top: auto px;
-    padding-bottom: auto px;
-  }
-  .navbar {
-    padding-top: auto;
-    padding-bottom: auto;
-    border: auto;
-    border-radius: auto;
-    margin-bottom: auto;
-    letter-spacing: auto px;
-    background-color: lightskyblue;
-    font-size: larger;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .navbar-nav  li a:hover {
-    color: #1abc9c !important;
-  }
-  </style>
+  <link rel="stylesheet" href="https://kurenedo.ru/index.css">
 </head>
-
 <body>
-
-  <!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" >Kurenedo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-      <!-- navbar info -->
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
   <div class="clock">
     <div class="time"></div>
     <div class="date-time"></div>
   </div>
-
   <script>
     var time = document.querySelector('.time');
     var dateTime = document.querySelector('.date-time');
@@ -180,9 +47,8 @@
     updateClock();
     setInterval(updateClock, 1000);
   </script>
-<!-- First Container -->
-<div class="container-fluid bg-1">
-  <h3 class="margin">DNS (обязательный блок)</h3>
+  <div class="demo">
+  <h1>DNS (обязательный блок)</h1>
   <ol>
     <li>Что такое доменное имя и для чего оно необходимо? </li>
     <li> Как связать домен с хостингом?</li>
@@ -194,16 +60,14 @@
   <li>Может ли одному IP соответствовать несколько доменных
     имен?</li>
 </ul>
-<li> Как проходит DNS запрос?</li>
+<li>Как проходит DNS запрос?</li>
 <li>Что такое уровни домена. Как получить поддомен?</li>
 </ol>
-</div>
-<!-- Second Container -->
-<div class="container-fluid bg-2">
-  <h3 class="margin">DNS (обязательный блок)</h3>
-  <ol>
+    <h2>DNS (обязательный блок)</h2>
+    
+    <ol>
   <li><p>Доменное имя – адрес, который указывают пользователи, чтобы зайти на ваш сайт.<p></li>
-  <li><p>Добавить домен на сервер хостинга и Указать в домене IP адрес сервера хостинга</p> </li>
+  <li><p>Добавить домен на сервер хостинга и Указать в домене IP адрес сервера хостинга</p> </li>
   <li><p>Запись A – переадресация страницы на существующий адрес. TXT-запись в большинстве случаев используется для подтверждения домена</p></li>
   <ul>
     <li><p>Одно доменное имя может соответствовать: одному IP-адресу</p></li>
@@ -212,11 +76,10 @@
   <li><p>Корневой сервер направляет запрос серверу первого уровня, который в свою очередь передает его серверу второго уровня. Это движение продолжается до тех пор, пока не будет найдено совпадение имени и IP-адреса.</p></li>
   <li><p>Уровень домена – расположение домена в иерархической структуре доменных имен в сети Интернет. Если говорить техническим языком, то нужно зайти в DNS сервер, задать А-запись с конкретным названием поддомена.</p></li>
   </ol>
-  </div>
-  <!-- Third Container -->
-  <div class="container-fluid bg-5">
-  <h3 class="margin">Хостинг (обязательный блок)</h3>
-  <ol>
+    
+    <h1>Хостинг (обязательный блок)</h1>
+    
+    <ol>
   <li>Что такое хостинг сайтов?</li>
   <li>Какие виды хостинга вы знаете? Чем отличаются (преимущества и
     недостатки):</li>
@@ -228,44 +91,30 @@
     <li>Colocatiod</li>
     <li>Облачный хостинг (cloud-hosting)?</li>
   </ul>
-  </div>
-<!-- Four Container -->
-<div class="container-fluid bg-3">
-<h3 class="margin">Хостинг (обязательный блок)</h3>
-<ol>
- <li><p>Хостинг для сайта — это пространство, на котором он <q>живет.</p></q></li>
- <li><p>Говоря простым языком, VPS (virtual private server) или  VPS (Virtual Private Server)   — это виртуальная машина, которую компания-провайдер предоставляет в аренду своим клиентам. Плюсы – Вы полностью сможете контролировать все процессы, происходящие на сервере. Минусы –  Неправильные настройки сервера могут вызвать уязвимости в безопасности.</p></li>
+    
+    <h2>Хостинг (обязательный блок)</h2>
+    
+    <ol>
+ <li><p>Хостинг для сайта — это пространство, на котором он <q>живет.</p></q></li>
+ <li><p>Говоря простым языком, VPS (virtual private server) или  VPS (Virtual Private Server)   — это виртуальная машина, которую компания-провайдер предоставляет в аренду своим клиентам. Плюсы – Вы полностью сможете контролировать все процессы, происходящие на сервере. Минусы –  Неправильные настройки сервера могут вызвать уязвимости в безопасности.</p></li>
  <p>Облачный хостинг – это виртуальные машины (ВМ) в облаке или IaaS (инфраструктура как сервис). При таком хостинге физические серверы объединяются в кластер, а системы хранения – в сеть хранения данных (SAN). Плюсы –  Более гибкий и масштабируемый, чем VPS. Минусы – Не предлагает такой степени контроля, как при VPS.</p>
  </ul>
 </ol>
-</div>
-<!-- Five Container -->
-<div class="container-fluid bg-6">
-<h3 class="margin">Утилиты* (обязательный блок)</h3>
-<p>Зачем нужны dig, host, nslookup, ping?</p>
-<p>NSLOOKUP — это утилита, которая позволяет через командную строку узнать содержимое DNS. Утилита поможет:</p>
+  
+  <h3>Утилиты* (обязательный блок)</h3>
+  
+  <p>Зачем нужны dig, host, nslookup, ping?</p>
+<p>NSLOOKUP — это утилита, которая позволяет через командную строку узнать содержимое DNS. Утилита поможет:</p>
    <ul>
    <li><p>узнать IP-адрес</p></li>
-   <li><p>узнать A, NS, SOA, MX-записи для домена.</p></li>
+   <li><p>узнать A, NS, SOA, MX-записи для домена.</p></li>
    </ul>
-    <p>Утилита dig позволяет отправлять на DNS-сервер запросы с заданными параметрами, чтобы узнать информацию обо всех или только о некоторых DNS-записях. Аналог dig — утилита nslookup: с её помощью тоже можно проверить DNS-записи домена. </p>
+    <p>Утилита dig позволяет отправлять на DNS-сервер запросы с заданными параметрами, чтобы узнать информацию обо всех или только о некоторых DNS-записях. Аналог dig — утилита nslookup: с её помощью тоже можно проверить DNS-записи домена. </p>
     <p>Команда ping позволяет проверять собственную связь и состояние удалённых хостов, находить и локализировать неполадки в программном и аппаратном обеспечении, тестировать качество сетей</p>
     <p>host — утилита в UNIX-системах (DNS-клиент; аналог в Windows — nslookup), предназначенная для обращения и получения информации DNS-серверов.</p>
-</div>
-<div>
-  <!-- Six Container -->
-  <div class="container-fluid bg-7">
-    <h3 class="margin">Другое (обязательный блок)</h3>
-    <ol>
-      <li><p>Что вы можете сказать о dos/ddos атаке?</p></li>
-      <li><p>Что такое SSL-сертификат?</p></li>
-     </ol>
-     <p>DDOS атака — это Массированная атака большого количества айпи адресов на сервер сайта, соотвественно ложит сайт до какого-то периода времени. В большинстве случаев это делается по злому умыслу.</p>
-     <p>SSL-сертификаты — это файлы данных, которые электронным способом привязывают ключ шифрования к информации о компании. Если на веб-сервере установлен сертификат, в браузере активируется «замок» и осуществляется безопасное подключение к веб-серверу по протоколу HTTPS.</p>
-  </div>
-  <!-- Seven Container -->
-  <div class="container-fluid bg-8">
-  <h3 class="margin">Работа с сайтами</h3>
+  
+  <h3>Работа с сайтами</h3>
+  
   <ol>
     <li><p>Из чего состоит сайт?</p></li>
     <li><p>Что такое CMS, какие виды вы знаете?</p></li>
@@ -274,21 +123,16 @@
   <p>Домен – хостинг – CMS – верстка – юзабили – дизайн(в моём случае случае только домен, днс сервер, гитхаб и кривые руки)</p>
   <p>CMS (англ. Content Management System) — это система управления контентом сайта. На профессиональном жаргоне CMS ещё называют «движок сайта». Примеры CMS: WordPress, Joomla!, OpenCart.</p>
   <p>База данных нужна для сайтов. Например магазины которые сохраняют ФИО, адрес куда доставить довар, пожелание покупателя для курьера. Куда сохраняются эти данные? Правильно в базу данных.</p>
-  </div>
-  <!-- Eight Container -->
-  <div class="container-fluid bg-9">
-    <h3 class="margin">Практический блок</h3>
-    <p>Определить IP-адрес сайта REG.RU (несколько способов)</p>
-    <p><a href="https://www.whois.com/whois/reg.ru">WHO IS</a> <p><q>ns1.reg.ru</q> <q>176.99.13.11</q> <q>2a00:f940:4::47</q></p>
-    <p>$ host -a reg.ru</p> 
-  </div>
-
-<!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p><a href="https://github.com/kurenedo">Github</a></p>
-  <p><a href="https://t.me/kurendo">Телега</a></p>
-  <p><a href="mailto:dima@kurenedo.ru">Электропочта</a></p>
-</footer>
+  
+  <h3>Практический блок</h3>
+  
+  <p>Определить IP-адрес сайта REG.RU (несколько способов)</p>
+    <p><a href="https://www.whois.com/whois/reg.ru">WHO IS</a> <p><q>ns1.reg.ru</q> <q>176.99.13.11</q>       <q>2a00:f940:4::47</q></p>
+<p>$ host -a reg.ru</p> 
 </div>
+  
+<div class="footer"><p><a href="https://github.com/kurenedo">Github</a></p> <p><a href="https://t.me/kurendo">Телега</a></p> <p><a href="mailto:dima@kurenedo.ru">Электропочта</a></p>
+</div>
+  
 </body>
 </html>
