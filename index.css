@@ -1,23 +1,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap'); 
-.clock {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: #000000;
-  }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
+.body {
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
